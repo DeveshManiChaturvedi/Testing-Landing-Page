@@ -59,16 +59,13 @@ document.addEventListener("DOMContentLoaded", () => {
   const navMenu = document.querySelector(".nav");
 
   if (navToggle && navMenu) {
-    navToggle.addEventListener("change", () => {
-      navMenu.style.display = navToggle.checked ? "flex" : "none";
-    });
 
     document.querySelectorAll(".nav a").forEach(link => {
-      link.addEventListener("click", () => {
-        navToggle.checked = false;
-        navMenu.style.display = "none";
-      });
-    });
+  link.addEventListener("click", () => {
+    document.getElementById("nav-toggle").checked = false;
+  });
+});
+
   }
 
 });
